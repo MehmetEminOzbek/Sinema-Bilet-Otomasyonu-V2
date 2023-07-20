@@ -1,0 +1,244 @@
+.h1 {
+  text-shadow: 3px 3px 3px wheat;
+}
+body {
+  background-color: black;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.seat {
+  background-color: gray;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  margin: 5px;
+  transition: 0.5s;
+}
+.seat:not(.reserved):hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
+.selecteds {
+  background-color: #650c8b;
+}
+.seat.selected {
+  background-color: #650c8b;
+}
+.seat.reserved {
+  background-color: #fff;
+}
+.seat:nth-of-type(2) {
+  margin-right: 25px;
+}
+.seat:nth-last-of-type(3) {
+  margin-right: 25px;
+}
+.screen {
+  width: 360;
+  height: 75px;
+  margin: 20px 0;
+  background-color: #f6f1e9;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.7);
+}
+
+.row {
+  display: flex;
+}
+.movie-list {
+  margin: 30px 0;
+}
+.info {
+  flex-direction: column;
+  position: absolute;
+  right: 32%;
+  bottom: 40%;
+  display: flex;
+  padding: 20px;
+  color: #fff;
+}
+.info li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10px 10px;
+}
+.info li small {
+  font-size: large;
+}
+.text {
+  font-size: large;
+}
+p.text span {
+  color: #650c8b;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: 0;
+  border: 0 !important;
+  background: rgb(231, 231, 231);
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 16em;
+  height: 175%;
+  line-height: 2;
+  background: rgb(10, 6, 43);
+  overflow: hidden;
+  border-radius: 0.25em;
+  box-shadow: 0 3px 8px #f6f1e9;
+  transition: all;
+}
+.select::after {
+  width: 20px;
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #2b2e2e;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.5s all ease;
+}
+.select:hover::after {
+  color: #650c8b;
+}
+
+#img1 {
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%),
+    url(img/assasin/Assasin2.jpg);
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33%;
+  border-radius: 3px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  opacity: 0.8;
+  transform: scale(1);
+  transition: 0.5s;
+}
+#img1.changed {
+  transform: scale(0.8) rotate(360deg);
+  transition: .8s;
+}
+.Assasin1:hover {
+  transform: scaleY(1);
+}
+
+.Assasin2:hover {
+  transform: scaleY(1);
+}
+#salonsecimtxt {
+  right: 15%;
+  top: 100px;
+  margin: 0 0 20px;
+  position: absolute;
+  text-shadow: 3px 3px 3px wheat;
+}
+
+.salonlar {
+  right: 0;
+
+  width: 53vh;
+  height: 350px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.oda {
+  margin: 20px 0;
+  width: 70px;
+  height: 70px;
+  background-color: #ffd966;
+  border-radius: 10px;
+  transition: 0.5s;
+  font-size: small;
+  background-image: url(img/other/door.jpeg);
+  background-size: contain;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.oda:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.5s;
+}
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+label > .oda {
+  margin-right: 10px;
+}
+
+label > span {
+  margin-right: 8px;
+  font-size: medium;
+}
+.rights {
+  padding: 0 0 0 260px;
+}
+.rights > .oda {
+  margin: 0 80px;
+  position: absolute;
+}
+
+
+#buy {
+  margin: 25px;
+  background-color: #650c8b;
+  border-radius: 10px;
+  width: 220px;
+  height: 50px;
+  font-size: x-large;
+  transition: 0.5s;
+  display: fixed;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#buy:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.7);
+}
+.backimg {
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 81%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 100%),url(img/other/salon.png);
+  right: 3%;
+  width: 28%;
+  height: 55vh;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 20%;
+  border-radius: 20px;
+}
